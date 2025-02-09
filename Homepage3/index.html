@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cards</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .yellow { background-color: #f4b400; }
+        .orange { background-color: #f4511e; }
+        .blue { background-color: #4285f4; }
+
+        .icon {
+            font-size: 40px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .more {
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-bottom: 2px solid white;
+            width: fit-content;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .more:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card yellow">
+            <div class="icon">🖨️</div>
+            <h3>PRINT & LAYOUT</h3>
+            <p>Magazines & Campaigns.</p>
+            <div class="more">MORE</div>
+        </div>
+
+        <div class="card orange">
+            <div class="icon">🖼️</div>
+            <h3>PHOTOGRAPHY</h3>
+            <p>Capturing Moments.</p>
+            <div class="more">MORE</div>
+        </div>
+
+        <div class="card blue">
+            <div class="icon">🏢</div>
+            <h3>BRAND & IDENTITY</h3>
+            <p>Corporate Management.</p>
+            <div class="more">MORE</div>
+        </div>
+    </div>
+
+</body>
+</html> 
