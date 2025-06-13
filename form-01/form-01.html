@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-01</title>
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            background: linear-gradient(to right, #0eb6e0, #07c7b4);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin:0;
+        }
+        .login-container{
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            width: 450px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color:#333;
+        }
+        input{
+            width:100%;
+            padding:10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width:100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+           
+        }
+        .login-btn:hover {
+            background: #333
+        }
+        .links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .links a{
+            text-decoration: none;
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Enetr Username">
+            <input type="password" id="password" placeholder="Enter password">
+            <label>
+                <input type="checkbox" id="rememberMe"> Remember me
+            </label>    
+            <br>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="links">
+            <a href="#">Forget Password</a>
+        </div>
+        <div class="links"> Not a member ? <a href="#">Register Here!</a></div>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value
+            var password = document.getElementById("password").value
+
+            if (username.trim() === "" || password.trim() ===""){
+                alert("Please fill in all fields");
+                return false;
+            }
+            alert("login Successfull");
+            return true;
+        }
+    </script>
+</body>
+</html>

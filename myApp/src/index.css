@@ -1,0 +1,234 @@
+:root {
+  --bg-color: #f9f9fa;
+  --text-color: #333;
+  --primary-color: #ffb6c1; /* Light Pink */
+  --secondary-color: #add8e6; /* Light Blue */
+  --accent-color: #ffd700; /* Gold */
+}
+
+.card, .card2 {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  margin-top: 10px;
+  perspective: 1000px;
+  position: relative;
+}
+
+/* Ensure consistent sizing */
+.card {
+  width: 250px;
+  height: 250px;
+}
+
+.card2 {
+  width: 50%;
+  height: 350px;
+}
+
+/* Unify headings */
+.card h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+  color: var(--text-color);
+}
+.card2 h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+/* Unify images */
+.card img, .card2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* Unified flip animations */
+.inner-card, .card2-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .inner-card,
+.flipped .card2-inner {
+  transform: rotateY(180deg);
+}
+
+.front-card, .back-card,
+.card2-front, .card2-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Unify card flipping */
+.back-card, .card2-back {
+  background-color: var(--secondary-color);
+  transform: rotateY(180deg);
+  color: var(--text-color);
+  padding: 20px;
+  font-size: 18px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--primary-color); /* Light Pink */
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+  
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --primary-color: #ffb6c1; /* Light Pink */
+  --secondary-color: #add8e6; /* Light Blue */
+  --accent-color: #ffd700; /* Gold */
+}
+
+.navBar {
+  background-color: var(--bg-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 0px; /* Remove space between elements */
+}
+
+.navBrand {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 10px; /* Adjust spacing between MyWeb and links */
+}
+
+.navLinks {
+  display: flex;
+  gap: 0px; /* Ensure no space between Home & About */
+}
+
+
+.navLink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.navBrand:hover {
+  color: var(--secondary-color);
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+/* Search Bar Container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.searchForm {
+  display: none; /* Hide the form initially */
+}
+.searchLabel:hover{
+  color: var(--primary-color);
+}
+.searchForm.show {
+  display: flex; /* Show when "Search" is clicked */
+}
+
+/* Search Bar Styling */
+form {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 25px;
+  border: 2px solid var(--primary-color);
+  padding: 5px;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchInput {
+  flex: 1;
+  height: 42px;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Search Button */
+.searchButton {
+  background: var(--primary-color);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  background: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.searchButton i {
+  color: white;
+  font-size: 1.2em;
+}
+
+/* Search Bar Expand Effect */
+form:hover {
+  width: 250px;
+}
+
+form:hover .searchInput {
+  opacity: 1;
+}

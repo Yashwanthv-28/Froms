@@ -1,0 +1,85 @@
+body{
+    font-family: Arial sans-serif;
+    background: linear-gradient( to right ,#71a3e6, #17b4a6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.form-box{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+label.styled-label {
+    display: block;
+    margin-top: 10px;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+h2{
+    margin-bottom: 10px;
+    color: #333;
+}
+p{
+    font-size: 14px;
+    color: #555;
+}
+input{
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+.btn{
+    background: #1abc9c;
+    color: white;
+    border: none ;
+    padding: 10px;
+    width:100% ;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+    padding:0px 25px;
+}
+ 
+.formerror{
+    padding: 0px 20px;
+    color: red;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.valid {
+    border: 2px solid green;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+}

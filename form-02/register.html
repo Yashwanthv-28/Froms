@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rigester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Rigester</h2>
+            <form name="myForm" onsubmit="validateRegister()">
+                <label for="first-name" class="styled-label">Enter Your First Name</label>
+                <input type="text" id="first-name" placeholder="John" >
+                <label for="last-name" class="styled-label">Enter Your Last Name</label>
+                <input type="text" id="last-name" placeholder="Doe" required>
+                <label for="register-mail" class="styled-label">Enter Your Email</label>
+                <input type="email" id="register-mail" placeholder="abc@mail.com" required>
+                <label for="password" class="styled-label">Enter Your New Password</label>
+                <input type="password" id="password" placeholder="********" required>
+                <label for="confirm-password" class="styled-label">Confirm-Password</label>
+                <input type="password" id="confirm-password" placeholder="********" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <p>By clicking the signup button, You agree to our 
+                <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+            </p>
+            <p>Already have account <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
